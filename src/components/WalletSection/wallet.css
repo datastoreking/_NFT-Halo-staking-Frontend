@@ -1,0 +1,23 @@
+.wallet {
+	padding: 0px 16px;
+}
+.wallet .container {
+	background: #020151;
+	padding: 100px 0px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 18px;
+	margin-bottom: 50px;
+}
+.wallet .container h1 {
+	font-size: 40px;
+}
+.wallet .container h2 {
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 400;
+	font-family: 35px;
+	margin: 18px 0px;
+}

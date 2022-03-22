@@ -1,0 +1,21 @@
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #02014e;
+	border-radius: 0px 0px 20px 20px;
+	padding: 16px 8px;
+}
+.logo img {
+	width: 99px;
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo h1 {
+	background: linear-gradient(90.72deg, #568e9f 5.2%, #eff3f4 80.19%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-left: 5px;
+}

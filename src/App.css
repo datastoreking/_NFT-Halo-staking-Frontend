@@ -1,0 +1,91 @@
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+    color: #00ff00;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    border: 1px solid #00ff00;
+    padding: 10px 24px;
+    border-radius: 15px;
+}
+
+.btn img {
+    width: 22px;
+    margin-right: 8px;
+}
+
+.mystate {
+    padding: 10px 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border: 1px solid #004da0;
+    border-radius: 20px;
+}
+
+#balanceshow h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+.statebalanceshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.current-counter {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+}
+
+.mint-btn {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mint-btn img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+@media(max-width: 992px) {
+    .statebalanceshow {
+        display: block;
+    }
+    .mystate {
+        justify-content: flex-start;
+    }
+}
