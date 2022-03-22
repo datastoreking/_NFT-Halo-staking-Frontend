@@ -81,6 +81,75 @@ ul {
     margin-right: 5px;
 }
 
+.mintmodal{
+	width: 60%;
+	margin: auto;
+    margin-top: 50px;
+    border: 1px solid #3c2b3b;
+    border-radius: 20px;
+}
+
+.modal-header{
+	display: flex;
+	font-size: 30px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+	border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.close-btn{
+	cursor: pointer;
+	background: url('./assets/Closebtn.svg');
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+.modal-mint-btn{
+	cursor: pointer;
+	width: 80px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    border: 1px solid #5e5151;
+	background-color: #1f95079e;
+	margin-left: 15px;
+}
+
+.modal-body, .modal-footer{
+	padding: 20px 15px;
+}
+
+.modal-footer{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.modal-close-btn{
+	cursor: pointer;
+	width: 80px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    border: 1px solid #5e5151;
+}
+
+.data-input{
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px 10px;
+	font-size: 20px;
+}
+
 @media(max-width: 992px) {
     .statebalanceshow {
         display: block;

@@ -5,6 +5,10 @@ import IMG3 from '../../assets/coin-min.1dcdd9c4.svg'
 import IMG4 from '../../assets/plus-min.1f71d0e7.svg'
 
 export default function BalanceShow () {
+	
+	const[active, setActive] = React.useState(false);
+
+    	
     return(
         <section id="balanceshow">
             <h1>My Stats</h1>
@@ -16,21 +20,21 @@ export default function BalanceShow () {
                 <div className='mystate'>
                     <div style={{width: '35px'}}><img src={IMG1} /></div>
                     <div>
-                        <p style={{marginBottom: '10px', fontSize: '40px'}} id="myhalo">0</p>
+                        <p style={{marginBottom: '10px', fontSize: '40px', textAlign: 'left'}} id="myhalo">0</p>
                         <p style={{color: "white", fontSize: '30px'}}>My Halo</p>
                     </div>
                 </div>
                 <div className='mystate'>
                     <div style={{width: '35px'}}><img src={IMG2} /></div>
                     <div>
-                        <p style={{marginBottom: '10px', fontSize: '40px'}}>0 Halo $0.00 </p>
+                        <p style={{marginBottom: '10px', fontSize: '40px', textAlign: 'left'}}>0 Halo $0.00 </p>
                         <p style={{color: "white", fontSize: '30px'}}>My Halo Balance</p>
                     </div>
                 </div>
                 <div className='mystate'>
                     <div style={{width: '35px'}}><img src={IMG3} /></div>
                     <div>
-                        <p style={{marginBottom: '10px', fontSize: '40px'}}>0 Halo $0.00 </p>
+                        <p style={{marginBottom: '10px', fontSize: '40px', textAlign: 'left'}}>0 Halo $0.00 </p>
                         <p style={{color: "white", fontSize: '30px'}}>Estimated Per Day</p>
                     </div>
                 </div>
@@ -45,7 +49,7 @@ export default function BalanceShow () {
                             <span className="current-counter" data-v-49af6a0a="">100</span>
                         </div>
                         <div>
-                            <p style={{marginBottom: '10px', fontSize: '20px'}} id="myhalo">200,000,000 UNIV</p>
+                            <p style={{marginBottom: '10px', fontSize: '20px', textAlign: 'left'}} id="myhalo">200,000,000 UNIV</p>
                             <p style={{color: "white", fontSize: '20px'}}>Incoming Transfers Buys Remaining </p>
                         </div>
                     </div>
@@ -55,7 +59,7 @@ export default function BalanceShow () {
                             <span className="current-counter" data-v-49af6a0a="">100</span>
                         </div>
                         <div>
-                            <p style={{marginBottom: '10px', fontSize: '20px'}}>7,000,000 UNIV </p>
+                            <p style={{marginBottom: '10px', fontSize: '20px', textAlign: 'left'}}>7,000,000 UNIV </p>
                             <p style={{color: "white", fontSize: '20px'}}>Sells Remaining</p>
                         </div>
                     </div>
@@ -65,7 +69,7 @@ export default function BalanceShow () {
                             <span className="current-counter" data-v-49af6a0a="">100</span>
                         </div>
                         <div>
-                            <p style={{marginBottom: '10px', fontSize: '20px'}}> 7,000,000 UNIV </p>
+                            <p style={{marginBottom: '10px', fontSize: '20px', textAlign: 'left'}}> 7,000,000 UNIV </p>
                             <p style={{color: "white", fontSize: '20px'}}>Outgoing Transfers Remaining</p>
                         </div>
                     </div>
@@ -78,9 +82,29 @@ export default function BalanceShow () {
             <p style={{marginTop: '20px', marginBottom: '20px'}}>When you mint a planet, 100% of the UNIV are burned and then added to your Planet.
                 There are no fees when compounding or claiming. What you see is what you get.</p>
             <p style={{marginTop: '20px', marginBottom: '20px'}}>Create your first planet by using the button below.</p>
-            <button className='mint-btn'>
+            <button className='mint-btn' onClick={() => setActive(true)}>
                 <img src={IMG4} /> Mint Planet
             </button>
+			{active ? 
+				<div className="mintmodal">
+					<div className="modal-header">
+						Mint Halo
+						<span className="close-btn" onClick={() => setActive(false)}></span>
+					</div>
+                    <form>
+                        <div className="modal-body">
+                            <input type="text" className="data-input" name="username" placeholder="Name" />
+                            <p style={{marginTop: '10px', textAlign: 'left'}}>Your name should be between 2 and 31 characters.</p>
+                            <input type="number" className="data-input" name="number" placeholder="Amount" style={{marginTop: '25px'}} />
+                            <p style={{marginTop: '10px', textAlign: 'left'}}>Min: 100,000 UNIV. This amount will be permanently locked in the NFT to generate perpetual yield. You can try with a small amount if you like.</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button className="modal-close-btn" onClick={() => setActive(false)}>Close</button>
+                            <button className="modal-mint-btn">Mint</button>
+                        </div>
+                    </form>
+				</div> 
+			: null}
         </section>
     );
 }
