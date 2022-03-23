@@ -127,17 +127,17 @@ const Footer = () => {
 							</li>
 							<li>
 								<a href="">
-									<img src={Discord} alt="Instagram" />
+									<img src={Discord} alt="Discord" />
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<img src={Twitter} alt="Instagram" />
+									<img src={Twitter} alt="Twitter" />
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<img src={Telegram} alt="Instagram" />
+									<img src={Telegram} alt="Telegram" />
 								</a>
 							</li>
 						</ul>

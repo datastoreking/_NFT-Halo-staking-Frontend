@@ -39,7 +39,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
     border: 1px solid #004da0;
     border-radius: 20px;
 }
